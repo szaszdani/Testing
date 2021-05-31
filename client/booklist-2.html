@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/styleForTable.css">
+</head>
+<body class="bgColor">
+    <div class="container mt-4">
+      <label class="h2" for="search">Keresés:</label>
+      <input id="searchbar" onkeyup="search_books()" type="text"
+            name="search" placeholder="Search Books..."> 
+      <table id="booklist_table" class="table mt-5">
+        <thead>
+          <tr>
+            <th>Cím</th>
+            <th>Író</th>
+            <th>Kiadó</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="lista"></tbody>
+      </table>
+      <hr>
+      <h1 class="form-group"><b>Új Könyv Felvétele</b></h1>
+      <form id="form">
+        <div class="form-group">
+          <label for="cim"><b>Cím</b></label>
+          <input type="text" id="cim" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="iro"><b>Író</b></label>
+          <input type="text" id="iro" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="kiado"><b>Kiadó</b></label>
+          <input type="text" id="kiado" class="form-control">
+        </div>
+        <input type="submit" value="Hozzáad" class="btn btn-dark btn-block">
+      </form>
+  </div>
+  
+<script type="text/javascript" src="./src/booklist-2.js"></script>
+<script src="./src/search.js"></script>
+</body>
+
+
+</html>
