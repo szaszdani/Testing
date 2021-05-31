@@ -20,6 +20,15 @@ class Register {
                 {
                     response = JSON.parse(this.responseText);
                     msg.innerHTML = response.messages;
+                    if(response.ok)
+                    {
+                        msg.style.color = "green";
+                    }
+                    else
+                    {
+                        msg.style.color = "red";
+                    }
+                    
                 }
             }
             var data = new FormData();

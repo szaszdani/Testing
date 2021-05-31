@@ -19,7 +19,12 @@ class Login {
                     msg.innerHTML = response.messages;
                     if(response.ok)
                     {
+                        msg.style.color = "green";
                         setTimeout(location.replace("http://localhost/testing/client/book.php"), 10000);
+                    }
+                    else
+                    {
+                        msg.style.color = "red";
                     }
                 }
             }
