@@ -10,13 +10,19 @@
     <div class="container mt-4">
       <label class="h2" for="search">Keresés:</label>
       <input id="searchbar" onkeyup="search_books()" type="text"
-            name="search" placeholder="Search Books..."> 
+            name="search" placeholder="Search Books...">
+      <div id="checkbox_div">
+        <p class="h2">Oszlop eltakarása:</p>
+        <li><input type="checkbox" value="hide" id="cim_col" onchange="hide_table(this.id);">Name</li>
+        <li><input type="checkbox" value="hide" id="szerzo_col" onchange="hide_table(this.id);">Author</li>
+        <li><input type="checkbox" value="hide" id="kiado_col" onchange="hide_table(this.id);">Publisher</li>
+      </div>
       <table id="booklist_table" class="table mt-5">
         <thead>
           <tr>
-            <th class="cim_col_head">Cím</th>
-            <th class="szerzo_col_head">Író</th>
-            <th class="kiado_col_head">Kiadó</th>
+            <th id="cim_col_head">Cím</th>
+            <th id="szerzo_col_head">Író</th>
+            <th id="kiado_col_head">Kiadó</th>
             <th></th>
           </tr>
         </thead>
