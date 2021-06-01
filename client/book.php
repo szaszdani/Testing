@@ -25,7 +25,7 @@ echo '
 <body>
     <div class="container p-5">
 
-        <h1>Book Site</h1>
+        <p class="display-1">Book Site</p>
         <button class="btn btn-primary" onclick="load_booklist()">Kiolvasott könyvek listája</button> 
 		<button class="btn btn-primary" onclick="load_booklist2()">Kiolvasandó könyvek listája</button>
         <a href="../service/logout.php" class="link">Logout</a>
