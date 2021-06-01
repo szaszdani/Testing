@@ -55,9 +55,9 @@ function load_thead()
 	let table_thead = document.getElementById("booklist_table_tbody");
 	table_thead.innerHTML = `<tr>
                 <th scope="col">#</th>
-                <th scope="col">Könyv címe</th>
-                <th scope="col">Író</th>
-                <th scope="col">Kiadó</th>
+                <th id="cim_col_head" scope="col">Könyv címe</th>
+                <th id="szerzo_col_head" scope="col">Író</th>
+                <th id="kiado_col_head" scope="col">Kiadó</th>
                 <th scope="col"></th>
             </tr>`;
 }
@@ -94,7 +94,8 @@ function add_book() {
 	let cell3 = row.insertCell(3);
 	let cell4 = row.insertCell(4);
 	
-	cell0.innerHTML = count;
+	cell0.innerHTML = count + "1";
+	cell0.classList.add("TESZT");
 	cell1.innerHTML = book;
 	cell2.innerHTML = writer; 
 	cell3.innerHTML = publisher; 
