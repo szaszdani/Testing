@@ -58,7 +58,7 @@ const comparer = (index, asc) => (a, b) => ((elso, masodik) =>
     )(getCellValue(asc ? a : b, index), getCellValue(asc ? b : a, index));
 
 document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() => {
-    const table = th.closest('#Books');
+    const table = th.closest('#booklist_table');
     Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
         .sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
         .forEach(tr => table.appendChild(tr) );
