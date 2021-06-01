@@ -45,8 +45,11 @@ function load_rows() {
 		
 		cell0.innerHTML = i;
 		cell1.innerHTML = book_array[i-1];
+		cell1.classList.add("cim_col");
 		cell2.innerHTML = writer_array[i-1]; 
+		cell2.classList.add("szerzo_col");
 		cell3.innerHTML = publisher_array[i-1]; 
+		cell3.classList.add("kiado_col");
         cell4.innerHTML = '<a href="#" onclick="delete_row('+(i-1)+')">Törlés</a>';
 	} 
 }
@@ -94,11 +97,13 @@ function add_book() {
 	let cell3 = row.insertCell(3);
 	let cell4 = row.insertCell(4);
 	
-	cell0.innerHTML = count + "1";
-	cell0.classList.add("TESZT");
+	cell0.innerHTML = count;
 	cell1.innerHTML = book;
+	cell1.classList.add("cim_col");
 	cell2.innerHTML = writer; 
+	cell2.classList.add("szerzo_col");
 	cell3.innerHTML = publisher; 
+	cell3.classList.add("kiado_col");
 	cell4.innerHTML = '<a href="#" onclick="delete_row('+(count-1)+')">Törlés</a>';
 	
 	save_booklist();

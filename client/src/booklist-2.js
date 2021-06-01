@@ -14,7 +14,7 @@ class Konyv {
     static Listara(konyv) {
       const list = document.querySelector('#lista');
       const row = document.createElement('tr');
-      row.innerHTML = `<td>${konyv.cim}</td><td>${konyv.iro}</td><td>${konyv.kiado}</td><td><a href="#"class="btn btn-danger btn-sm delete">Törlés</a></td>`;
+      row.innerHTML = `<td class="cim_col">${konyv.cim}</td><td class="szerzo_col">${konyv.iro}</td><td class="kiado_col">${konyv.kiado}</td><td><a href="#"class="btn btn-danger btn-sm delete">Törlés</a></td>`;
       list.appendChild(row);
     }
   
